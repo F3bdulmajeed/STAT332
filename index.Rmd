@@ -28,6 +28,6 @@ assumptions? Do they contradict them? What are the consequences for inference?
 Also, we will explore some nonlinear models and data transformations. Finally, we
 discuss Linear regression based on the categorical with some applications. The whole lecture note for this module can be found by clicking [here](https://ksusa-my.sharepoint.com/:b:/r/personal/aalharbi10_ksu_edu_sa/Documents/All%20lucture%20notes.pdf?csf=1&web=1&e=cLiiAg). However, this textbook will be used for the exercise classes for the module (STAT332).  The notes have not completed yet, I will still add new exercises and fix typos. If you find any typos or mistakes or have any question, I will appreciate if you email me at `Aalharbi10@ksu.edu.sa` 
 
-**Note:** *My fellow [Abdulrahman Alfaifi](https://faculty.ksu.edu.sa/ar/alfaifi) is posting very helpful youtube videos discussing  some exercises and past-exam questions you can reach that easily by clicking [here](https://www.youtube.com/channel/UCeT75VlTKwTQdoDsWrtzjXA/playlists)*.
+**Note:** *My colleague [Abdulrahman Alfaifi](https://faculty.ksu.edu.sa/ar/alfaifi) is posting very helpful youtube videos discussing  some exercises and past-exam questions you can reach that easily by clicking [here](https://www.youtube.com/channel/UCeT75VlTKwTQdoDsWrtzjXA/playlists)*.
 
 
