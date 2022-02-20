@@ -1,4 +1,4 @@
-# Least squared estimation
+# 1$^{st}$ Tutorial
 
 ## Recap
 Simple linear regression in an important and fundamental technique in applied statistical modeling as it is used to describe the linearity in the relationship between two variables. 
