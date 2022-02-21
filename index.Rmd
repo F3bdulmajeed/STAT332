@@ -3,17 +3,9 @@ title: "Regression Analysis"
 author: "Lecturer: Abdulmajeed Alharbi"
 date: "Last update: `r Sys.Date()`"
 site: bookdown::bookdown_site
-output:
-  bookdown::gitbook:
-    sharing:
-    twitter: false
-    facebook: false
-    github: true
-description: "This note book is for the excersices class for STAT332"
+description: "This note book is for the excersices class for STAT331"
 github-repo: F3bdulmajeed
-chapter_name: "Lecture"
 ---
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```

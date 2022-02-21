@@ -1,4 +1,4 @@
-# 1$^{st}$ Tutorial
+# 1st Tutorial
 
 ## Recap
 Simple linear regression in an important and fundamental technique in applied statistical modeling as it is used to describe the linearity in the relationship between two variables. 

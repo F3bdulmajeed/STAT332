@@ -1,6 +1,7 @@
-# 2$^{nd}$ Tutorial
+# 2nd Tutorial
 
 ## Recap
+
 Previously we discussed the least squared approach to estimate the slope and the bias parameters in the simple linear model. An important question arises here is to test how significant is our estimation and in order to assess that let us assume the error term is normally distributed with zero mean and constant variance $\sigma^2$. We want to test $H_0 : \beta_j = \hat{\beta}~~~ \text{vs.}~ ~~H_1 : \beta_{j}= \hat{\beta}$ at level $\alpha$ where $\hat{\beta}$  is some constant and $j=0,1$.
 \
 The  **decision** rule is to reject $H_0$ if:
@@ -28,11 +29,11 @@ While $\sigma^2$ can be estimated by using the unbiased estimator $s^2$,
 
 $$s^2=\frac{1}{2}\sum_{i=1}^{n}(y'_i-\hat{y'_i})^2=0.0018$$
 
-Hence $SE(\beta)=\sqrt{Var(\hat\beta)}= 0.0739$.
+Hence $SE(\hat{\beta})=\sqrt{Var(\hat\beta)}= 0.0739$.
 Now to test $H_0: \beta=3$ against $H_q: \beta\neq3$
 Under $H_0$, the T-test is $-0.0932$
 \
-So the p-value is $P(|t4| > 0.0932) = 2P(t4 < −0.0932) = 0.9302$. There is therefore no evidence to reject $H_0$ i.e. no evidence against a cubic relationship.
+So the p-value is $P(|t_4| > 0.0932) = 2P(t_4 < −0.0932) = 0.9302$. There is therefore no evidence to reject $H_0$ i.e. no evidence against a cubic relationship.
 
 **Exercise 2.2:**
 The results of a class of 10 students on midterm marks $X$ and on the final marks $Y$ are as follows:
@@ -56,7 +57,7 @@ knitr::kable(frame, raw.names = c("X","Y"), align = "lccrr")
 Now we can estimate the regression parameters using the least square approach so, 
 \begin{align}
 &\hat{\beta_1} = \frac{\sum(y-\bar{y})(x-\bar{x})}{\sum(x-\bar{x})^2} = \frac{2268.8}{ 1818.4}= 1.24769 \\
-&\hat{\beta_0}=\bar{y}-\beta_1~\bar{x} = -29.26659
+&\hat{\beta_0}=\bar{y}-\hat{\beta}_1~\bar{x} = -29.26659
 
 \end{align}
 
@@ -65,7 +66,7 @@ the interpretation of the coefficients is that the model expect that the final m
 To construct a $95\%$ confidence interval we know that $$
 |T|=\lvert~\frac{\beta_j-{\hat\beta}}{SE(\hat\beta_j)}\lvert \sim t_{n-2}$$
 It follows that a $100(1 − α)%$ confidence interval for $\beta_j$ is
-$$\hat{\beta_j} \pm SE(\hat\beta)\times~t_{n-2,\alpha/2}$$
+$$\hat{\beta_j} \pm SE(\hat\beta_j)\times~t_{n-2,\alpha/2}$$
 So as 
 
 \begin{align}
@@ -104,11 +105,18 @@ predict(fit,newdata = data.frame(X=c(55)))
 ```
 
 ## Coursework
+1 . The computer repair data gives the length of time of service calls in minutes $Y$ and the number of components repaired in a computer $X$. Some summary measures for this data are:
+\begin{align}
+&n=14\\
+&\sum x_i=84\\
+&\sum y_i=1361\\
+&S_{XX} = 114\\
+&S_{YY} = 27768.26\\
+&S_{XY} = 1768
+\end{align}
 
-In the following R output 3 values denoted {i?} for $i = 1,2$ and $3$ have been removed. What are the $3$ missing values?
-\
-\
-```{r, echo=FALSE}
-knitr::include_graphics("Homework_2.jpg")
-```
+a. Find the point estimate of the intercept and slop to model the
+length of service call as a linear function of the number of units
+serviced.
 
+b. Give 95% confidence interval for the slope and interpret. 
