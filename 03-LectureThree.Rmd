@@ -32,44 +32,9 @@ $$R^2=\frac{SSR}{SSTO}=1-~\frac{SSE}{SSTO}$$
 which measures the proportion of variability explained by the regression.
 
 ## Exercieses
-1.  In the following R output 9 values denoted {i?} for $i = 1,2$ ,..., $9$ have been removed. What are the $9$ missing values? **Note:** there are 50 observations are used to draw this model. 
-\
-\
-```{r, echo=FALSE}
-knitr::include_graphics("ExerciseT3.png")
-```
-
-2. interpret $R^2$ in the previous Exercise. 
-3. Draw a conclusion about the existence of the regression. 
-
-
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-2. A second-hand cars dealer has 10 cars for sale. He decides to investigate the relation between the cars age $X$ (in years) and the millage $Y$ (in thousands miles) by using the simple linear regression model. The dealer reported the following: The mean and standard deviation of the cars millage are given, respectively, by $40.6$ and $11.87153$. The correlation coefficient between $X$ and $Y$ is $0.9687105$. The estimated simple regression model is $\hat{Y} = 8.892 + 7.733X$.
+::: {.exercise}
+A second-hand cars dealer has 10 cars for sale. He decides to investigate the relation between the cars age $X$ (in years) and the millage $Y$ (in thousands miles) by using the simple linear regression model. The dealer reported the following: The mean and standard deviation of the cars millage are given, respectively, by $40.6$ and $11.87153$. The correlation coefficient between $X$ and $Y$ is $0.9687105$. The estimated simple regression model is $\hat{Y} = 8.892 + 7.733X$.
+:::
 where
 
 $$𝑛 = 10 ~~~~~~~~~~ \bar{Y} = 40.6 ~~~~~~~~~~ S_Y = 11.87153 $$
@@ -97,6 +62,11 @@ e) What proportion of the total variation in millage is explained by age?
 \
 \
 \
+
+
+::: {.exercise}
+Attempt Problem 2 and Problem 3 in the past exam paper [here](https://ksusa-my.sharepoint.com/:b:/g/personal/aalharbi10_ksu_edu_sa/ET1ClL2rf-FDo1DRPjXS7xsB1Ttoe_h7y1Pm6omx-DanxA?e=LTWeK9)
+:::
 \
 \
 \
@@ -104,5 +74,23 @@ e) What proportion of the total variation in millage is explained by age?
 \
 \
 \
-## Coursework
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
 
