@@ -16,9 +16,9 @@ Source of Variation    SS       df        MS        F
 
 Where, 
 \begin{align}
-SSR &= \sum~(\hat{y}_{i}-\bar{y})^2\\
-SSE &= \sum~(\hat{y_i}-y_i)^2\\
-SSTO&= \sum~(y_i-\bar{y})^2\\
+SSR &= \sum~(\hat{y}_{i}-\bar{y})^2 = \hat{\beta_1^2}S_{xx}\\
+SSE &= \sum~(\hat{y_i}-y_i)^2=S_{yy}-\dfrac{S_{xy}^2}{S_{xx}}\\
+SSTO&= \sum~(y_i-\bar{y})^2 = S_{yy}\\
 MSR &= \frac{SSR}{1}\\
 MSE &= \frac{SSE}{n-2}
 \end{align}
@@ -35,15 +35,12 @@ which measures the proportion of variability explained by the regression.
 ::: {.exercise}
 A second-hand cars dealer has 10 cars for sale. He decides to investigate the relation between the cars age $X$ (in years) and the millage $Y$ (in thousands miles) by using the simple linear regression model. The dealer reported the following: The mean and standard deviation of the cars millage are given, respectively, by $40.6$ and $11.87153$. The correlation coefficient between $X$ and $Y$ is $0.9687105$. The estimated simple regression model is $\hat{Y} = 8.892 + 7.733X$.
 :::
-where
 
-$$𝑛 = 10 ~~~~~~~~~~ \bar{Y} = 40.6 ~~~~~~~~~~ S_Y = 11.87153 $$
 
 a) Obtain $S_{YY} , S_{XX}$ and $S_{XY}$
 b) Construct $90\%$ CI for the slope
-c) Compute the $95\%$ CI for car millage with age $7$ years.
-d) Use ANOVA for testing the significance of the linearity.
-e) What proportion of the total variation in millage is explained by age?
+c) Use ANOVA for testing the significance of the linearity.
+d) What proportion of the total variation in millage is explained by age?
 \
 \
 \

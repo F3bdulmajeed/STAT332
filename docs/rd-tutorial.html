@@ -143,9 +143,9 @@ Note that if we reject <span class="math inline">\(H_0\)</span> we are saying th
 </table>
 <p>Where,
 <span class="math display">\[\begin{align}
-SSR &amp;= \sum~(\hat{y}_{i}-\bar{y})^2\\
-SSE &amp;= \sum~(\hat{y_i}-y_i)^2\\
-SSTO&amp;= \sum~(y_i-\bar{y})^2\\
+SSR &amp;= \sum~(\hat{y}_{i}-\bar{y})^2 = \hat{\beta_1^2}S_{xx}\\
+SSE &amp;= \sum~(\hat{y_i}-y_i)^2=S_{yy}-\dfrac{S_{xy}^2}{S_{xx}}\\
+SSTO&amp;= \sum~(y_i-\bar{y})^2 = S_{yy}\\
 MSR &amp;= \frac{SSR}{1}\\
 MSE &amp;= \frac{SSE}{n-2}
 \end{align}\]</span></p>
@@ -158,12 +158,9 @@ MSE &amp;= \frac{SSE}{n-2}
 <div class="exercise">
 <p><span id="exr:unlabeled-div-1" class="exercise"><strong>Exercise 3.1  </strong></span>A second-hand cars dealer has 10 cars for sale. He decides to investigate the relation between the cars age <span class="math inline">\(X\)</span> (in years) and the millage <span class="math inline">\(Y\)</span> (in thousands miles) by using the simple linear regression model. The dealer reported the following: The mean and standard deviation of the cars millage are given, respectively, by <span class="math inline">\(40.6\)</span> and <span class="math inline">\(11.87153\)</span>. The correlation coefficient between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is <span class="math inline">\(0.9687105\)</span>. The estimated simple regression model is <span class="math inline">\(\hat{Y} = 8.892 + 7.733X\)</span>.</p>
 </div>
-<p>where</p>
-<p><span class="math display">\[𝑛 = 10 ~~~~~~~~~~ \bar{Y} = 40.6 ~~~~~~~~~~ S_Y = 11.87153 \]</span></p>
 <ol style="list-style-type: lower-alpha">
 <li>Obtain <span class="math inline">\(S_{YY} , S_{XX}\)</span> and <span class="math inline">\(S_{XY}\)</span></li>
 <li>Construct <span class="math inline">\(90\%\)</span> CI for the slope</li>
-<li>Compute the <span class="math inline">\(95\%\)</span> CI for car millage with age <span class="math inline">\(7\)</span> years.</li>
 <li>Use ANOVA for testing the significance of the linearity.</li>
 <li>What proportion of the total variation in millage is explained by age?<br />
 <br />
