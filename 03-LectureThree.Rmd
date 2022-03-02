@@ -41,6 +41,7 @@ a) Obtain $S_{YY} , S_{XX}$ and $S_{XY}$
 b) Construct $90\%$ CI for the slope
 c) Use ANOVA for testing the significance of the linearity.
 d) What proportion of the total variation in millage is explained by age?
+e) Compute the $95\%$ CI for car millage with age $7$ years.
 \
 \
 \
