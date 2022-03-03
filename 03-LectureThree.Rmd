@@ -2,7 +2,7 @@
 
 ## Recap
 
-We want to test $H_0:\beta_0 = \beta_1 = 0$ vs. $H_1 :\beta_1~~ \text{or} ~~\beta_0 \neq 0$ at level $\alpha$.
+We want to test $H_0: \beta_1 = 0$ vs. $H_1 :\beta_1 \neq 0$ at level $\alpha$.
 Note that if we reject $H_0$ we are saying that the model $\hat{\beta}_0 +\hat{\beta_1}X$  has some ability to explain the variance that we are observing in Y . (i.e. There exists a linear relationship between the explanatory variables and the response variable.) Recall that ANOVA table can be used in the test for the existence of regression which is 
 
 Source of Variation    SS       df        MS        F
@@ -30,6 +30,8 @@ To assess how well the regression line fit the data one can use the **The coeffi
 $$R^2=\frac{SSR}{SSTO}=1-~\frac{SSE}{SSTO}$$ 
 
 which measures the proportion of variability explained by the regression.
+
+
 
 ## Exercieses
 ::: {.exercise}
