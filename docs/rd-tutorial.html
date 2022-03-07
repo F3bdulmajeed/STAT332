@@ -157,32 +157,85 @@ MSE &amp;= \frac{SSE}{n-2}
 <h2><span class="header-section-number">3.2</span> Exercieses</h2>
 <div class="exercise">
 <p><span id="exr:unlabeled-div-1" class="exercise"><strong>Exercise 3.1  </strong></span>A second-hand cars dealer has 10 cars for sale. He decides to investigate the relation between the cars age <span class="math inline">\(X\)</span> (in years) and the millage <span class="math inline">\(Y\)</span> (in thousands miles) by using the simple linear regression model. The dealer reported the following: The mean and standard deviation of the cars millage are given, respectively, by <span class="math inline">\(40.6\)</span> and <span class="math inline">\(11.87153\)</span>. The correlation coefficient between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is <span class="math inline">\(0.9687105\)</span>. The estimated simple regression model is <span class="math inline">\(\hat{Y} = 8.892 + 7.733X\)</span>.</p>
-</div>
 <ol style="list-style-type: lower-alpha">
 <li>Obtain <span class="math inline">\(S_{YY} , S_{XX}\)</span> and <span class="math inline">\(S_{XY}\)</span></li>
 <li>Construct <span class="math inline">\(90\%\)</span> CI for the slope</li>
 <li>Use ANOVA for testing the significance of the linearity.</li>
 <li>What proportion of the total variation in millage is explained by age?</li>
-<li>Compute the <span class="math inline">\(95\%\)</span> CI for car millage with age <span class="math inline">\(7\)</span> years.<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+<li>Compute the <span class="math inline">\(95\%\)</span> CI for car millage with age <span class="math inline">\(7\)</span> years.</li>
+</ol>
+</div>
+<p><br />
+</p>
+<p><strong>Solution 3.1:</strong><br />
+a)</p>
+<p><span class="math display">\[S^2_{Y} = 11.87153^2 = \dfrac{S_{YY}}{n-1} ~~ \Rightarrow ~~ S_{YY} = 11.87153^2 \times 9 = 1268.399\]</span></p>
+<p>Knowing <span class="math display">\[\hat{\beta}_1 = \dfrac{S_{XY}}{S_{XX}} \Rightarrow ~ S_{XY}= \hat{\beta}_1 S_{XX}\]</span></p>
+<p>Then,</p>
+<p><span class="math display">\[r_{XY} = \dfrac{S_{XY}}{\sqrt{S_{XX}}~\sqrt{S_{YY}}} = \dfrac{\hat{\beta}_1 S_{XX}}{\sqrt{S_{XX}}~\sqrt{S_{YY}}}= \dfrac{\hat{\beta}_1~\sqrt{S_{XX}}}{\sqrt{1268.399}} \]</span><br />
+Therefore:<br />
+<span class="math display">\[0.9687105 = \dfrac{7.733~\sqrt{S_{XX}}}{\sqrt{1268.399}}~ \Rightarrow S_{XX} = 19.9\]</span>
+b)
+<span class="math display">\[\begin{align}
+
+&amp;SSE = S_{YY}-\dfrac{S^2_{XY}}{S_{XX}} = 78.187\\
+&amp;MSE = \dfrac{SSE}{n-2} = 9.773375\\
+&amp;S(\hat{\beta}_1) = \sqrt{\dfrac{MSE}{S_{XX}}} = 0.7\\
+\end{align}\]</span>
+Therefore,
+\
+The <span class="math inline">\(90\%\)</span> CI for the slope is:
+<span class="math display">\[(\hat{\beta}_1 \pm t_{(1−\alpha/2⁄ ,𝑛−2)} \times S(\hat{\beta}_{1})) = (6.432 , 9.035)\]</span></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li><br />
 </li>
 </ol>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Source of Variation</th>
+<th align="center">SS</th>
+<th align="center">df</th>
+<th align="center">MS</th>
+<th align="center">F</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Regression</td>
+<td align="center">1190.22</td>
+<td align="center">1</td>
+<td align="center">1990.22</td>
+<td align="center">121.787</td>
+</tr>
+<tr class="even">
+<td align="left">Error</td>
+<td align="center">78.187</td>
+<td align="center">8</td>
+<td align="center">9.77</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="center">1268.399</td>
+<td align="center">9</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[F_{0.95,1,8} = 5.31 &lt; 121.787 \]</span>
+Therefore <span class="math inline">\(H_0\)</span> is rejected and that implies the existence of linear relationship.<br />
+d)
+<span class="math display">\[R^2 = r_{XY}^2 = 0.9384 \]</span><br />
+e)
+The fitted value <span class="math inline">\(\hat{Y_h} = 8.892+7.7337~\times 7 = 63.0279\)</span><br />
+<span class="math display">\[\hat{\beta}_0 = \bar{Y} - \hat{\beta}_1~\bar{X} ~~ \Rightarrow ~ \bar{X}= 4.1\]</span><br />
+<span class="math display">\[S(\hat{Y})= MSE~\times (\dfrac{1}{n}+\dfrac{(X_h-\bar{X})^2}{S_{XX}})= 5.107\]</span></p>
+<p><br />
+The <span class="math inline">\(95\%\)</span> CI is:</p>
+<p><span class="math display">\[(\hat{Y}_h \pm t_{(1-\alpha/2, n-2)} S(\hat{Y}_h))=(51.251158 , 74.804642)\]</span>
+\</p>
 <div class="exercise">
 <p><span id="exr:unlabeled-div-2" class="exercise"><strong>Exercise 3.2  </strong></span>Attempt Problem 2 and Problem 3 in the past exam paper <a href="https://ksusa-my.sharepoint.com/:b:/g/personal/aalharbi10_ksu_edu_sa/ET1ClL2rf-FDo1DRPjXS7xsB1Ttoe_h7y1Pm6omx-DanxA?e=LTWeK9">here</a></p>
 </div>

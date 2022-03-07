@@ -34,35 +34,76 @@ which measures the proportion of variability explained by the regression.
 
 
 ## Exercieses
+
 ::: {.exercise}
 A second-hand cars dealer has 10 cars for sale. He decides to investigate the relation between the cars age $X$ (in years) and the millage $Y$ (in thousands miles) by using the simple linear regression model. The dealer reported the following: The mean and standard deviation of the cars millage are given, respectively, by $40.6$ and $11.87153$. The correlation coefficient between $X$ and $Y$ is $0.9687105$. The estimated simple regression model is $\hat{Y} = 8.892 + 7.733X$.
-:::
-
 
 a) Obtain $S_{YY} , S_{XX}$ and $S_{XY}$
 b) Construct $90\%$ CI for the slope
 c) Use ANOVA for testing the significance of the linearity.
 d) What proportion of the total variation in millage is explained by age?
 e) Compute the $95\%$ CI for car millage with age $7$ years.
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
+:::
 \
 
+**Solution 3.1:**
+\
+a)
+
+$$S^2_{Y} = 11.87153^2 = \dfrac{S_{YY}}{n-1} ~~ \Rightarrow ~~ S_{YY} = 11.87153^2 \times 9 = 1268.399$$
+
+Knowing $$\hat{\beta}_1 = \dfrac{S_{XY}}{S_{XX}} \Rightarrow ~ S_{XY}= \hat{\beta}_1 S_{XX}$$ 
+
+Then, 
+
+$$r_{XY} = \dfrac{S_{XY}}{\sqrt{S_{XX}}~\sqrt{S_{YY}}} = \dfrac{\hat{\beta}_1 S_{XX}}{\sqrt{S_{XX}}~\sqrt{S_{YY}}}= \dfrac{\hat{\beta}_1~\sqrt{S_{XX}}}{\sqrt{1268.399}} $$
+\
+Therefore:
+\
+$$0.9687105 = \dfrac{7.733~\sqrt{S_{XX}}}{\sqrt{1268.399}}~ \Rightarrow S_{XX} = 19.9$$
+b)
+\begin{align}
+
+&SSE = S_{YY}-\dfrac{S^2_{XY}}{S_{XX}} = 78.187\\
+&MSE = \dfrac{SSE}{n-2} = 9.773375\\
+&S(\hat{\beta}_1) = \sqrt{\dfrac{MSE}{S_{XX}}} = 0.7\\
+\end{align}
+Therefore,
+\\
+The $90\%$ CI for the slope is:
+$$(\hat{\beta}_1 \pm t_{(1−\alpha/2⁄ ,𝑛−2)} \times S(\hat{\beta}_{1})) = (6.432 , 9.035)$$
+
+c)
+\
+
+
+Source of Variation    SS       df          MS        F
+-------------------- -------- ----------  -------   ------- 
+     Regression       1190.22    1        1990.22   121.787
+       Error          78.187     8          9.77
+       Total          1268.399   9
+
+
+
+
+$$F_{0.95,1,8} = 5.31 < 121.787 $$
+Therefore $H_0$ is rejected and that implies the existence of linear relationship. 
+\
+d)
+$$R^2 = r_{XY}^2 = 0.9384 $$
+\
+e)
+The fitted value $\hat{Y_h} = 8.892+7.7337~\times 7 = 63.0279$ 
+\
+$$\hat{\beta}_0 = \bar{Y} - \hat{\beta}_1~\bar{X} ~~ \Rightarrow ~ \bar{X}= 4.1$$
+\
+$$S(\hat{Y})= MSE~\times (\dfrac{1}{n}+\dfrac{(X_h-\bar{X})^2}{S_{XX}})= 5.107$$
+
+\
+The $95\%$ CI is:
+
+$$(\hat{Y}_h \pm t_{(1-\alpha/2, n-2)} S(\hat{Y}_h))=(51.251158 , 74.804642)$$
+\\
 
 ::: {.exercise}
 Attempt Problem 2 and Problem 3 in the past exam paper [here](https://ksusa-my.sharepoint.com/:b:/g/personal/aalharbi10_ksu_edu_sa/ET1ClL2rf-FDo1DRPjXS7xsB1Ttoe_h7y1Pm6omx-DanxA?e=LTWeK9)
