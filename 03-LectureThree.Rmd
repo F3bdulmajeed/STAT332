@@ -103,35 +103,10 @@ $$S(\hat{Y})= MSE~\times (\dfrac{1}{n}+\dfrac{(X_h-\bar{X})^2}{S_{XX}})= 5.107$$
 The $95\%$ CI is:
 
 $$(\hat{Y}_h \pm t_{(1-\alpha/2, n-2)} S(\hat{Y}_h))=(51.251158 , 74.804642)$$
-\\
 
-::: {.exercise}
-Attempt Problem 2 and Problem 3 in the past exam paper [here](https://ksusa-my.sharepoint.com/:b:/g/personal/aalharbi10_ksu_edu_sa/ET1ClL2rf-FDo1DRPjXS7xsB1Ttoe_h7y1Pm6omx-DanxA?e=LTWeK9)
-:::
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
-\
 
+## Coursework 
+
+1. Attempt Problem 3 and Problem 4 in the past exam paper [here](https://ksusa-my.sharepoint.com/:b:/g/personal/aalharbi10_ksu_edu_sa/EdNFpfUaWttBpOYIFCbKr0YBP5VeZlCi0i9MD8z5_5-Tmg?e=r2cftk) 
+\
+2. Attempt Problem 2 and Problem 3 in the past exam paper [here](https://ksusa-my.sharepoint.com/:b:/g/personal/aalharbi10_ksu_edu_sa/ET1ClL2rf-FDo1DRPjXS7xsB1Ttoe_h7y1Pm6omx-DanxA?e=LTWeK9)

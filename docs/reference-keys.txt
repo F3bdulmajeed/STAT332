@@ -3,7 +3,6 @@ exr:unlabeled-div-2
 exr:unlabeled-div-3
 exr:unlabeled-div-4
 exr:unlabeled-div-5
-exr:unlabeled-div-6
 st-tutorial
 recap
 exercises
@@ -15,3 +14,12 @@ coursework-1
 rd-tutorial
 recap-2
 exercieses
+coursework-2
+th-tutorial
+recap-3
+exercises-2
+coursework-3
+th-tutorial-1
+recap-4
+exercises-3
+courswork

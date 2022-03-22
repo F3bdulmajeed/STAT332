@@ -1,0 +1,123 @@
+# 5th Tutorial 
+## Recap
+Recall that the simple linear model formula is defined as follow:
+$$y_i = \beta_0 +\beta_1~x_i + \epsilon_i ~~~~~~~~i =1,2,...,n$$
+However, this formula can be re-written in matrices setup to be as follow:
+$$\textbf{Y} = \beta~\textbf{X}+\epsilon$$
+Where $\textbf{Y}$ is a vector of y elements, $\beta= [\beta_0, \beta_1]^T$ and $\epsilon$ is a vector of the errors and $X$ is the following matrix:
+$$\textbf{X}= \begin{bmatrix} 
+1  & x_1 \\ 
+\vdots & \vdots \\
+1 & x_n
+\end{bmatrix}$$
+
+## Exercises 
+::: {.exercise}
+Using the matrices framework calculate the least squared estimate for $\beta$. 
+:::
+**Solution**
+\
+Let us start with reminding ourselves with that
+\
+1) $\dfrac{d}{dx} Ax = A^T$ where A is a matrix of constants.
+\
+2) $\dfrac{d}{dx} x^TAx = 2Ax$  whenever A is symmetric.
+\
+3) $\sum x_i^2 = \textbf{x}^T~\textbf{x}$
+\
+Now as we know the $SSR = \sum(y-\hat{y})^2$ and that can be rearranged to be written $SSR = (\textbf{Y}-\beta~\textbf{X})^T~(\textbf{Y}-\beta~\textbf{X})$ so now we aim to find $\underset{\beta}{\min}~ SSR$ in order to do this optimisation problem we need to calculate the gradient of SSR
+\begin{align}
+&\dfrac{d}{d~\beta}~(\textbf{Y}-\beta~\textbf{X})^T~(\textbf{Y}-\beta~\textbf{X})\\
+&\dfrac{d}{d~\beta} (\textbf{Y}^T\textbf{Y}-\textbf{Y}^T~\textbf{X}\beta-\beta^T~\textbf{X}^T~\textbf{Y}+\beta^T~\textbf{X}^T~\textbf{X}~\beta)\\
+&\dfrac{d}{d~\beta} (\textbf{Y}^T\textbf{Y}-2\textbf{Y}^T~\textbf{X}\beta+\beta^T~\textbf{X}^T~\textbf{X}~\beta)\\
+&= (-2\textbf{Y}T\textbf{X})^T+2\textbf{X}^T\textbf{X}\beta\\
+&= -2~\textbf{X}^T\textbf{Y} + 2\textbf{X}^T\textbf{X}\beta
+\end{align}
+Therefore $\hat\beta$ will be the least squares estimator of $\beta$ if $-2~\textbf{X}^T\textbf{Y} + 2\textbf{X}^T\textbf{X}\hat\beta=0$.
+To be able to isolate $\hat\beta$ it is necessary for $\textbf{X}^T\textbf{X}$ to be invertible; therefore we need $\textbf{X}$ to be of full rank,then 
+
+$$\hat\beta= (\textbf{X}^T\textbf{X})^{-1}~ \textbf{X}^T\textbf{Y} $$
+
+
+::: {.exercise}
+Prove that $\hat{\beta}$ is unbiased.
+:::
+**Solution**
+\begin{align}
+E(\hat\beta) & = E((\textbf{X}^T\textbf{X})^{-1}~ \textbf{X}^T\textbf{Y})\\
+             & (\textbf{X}^T\textbf{X})^{-1}~ \textbf{X}^T~E(\textbf{Y})\\
+             & (\textbf{X}^T\textbf{X})^{-1} \textbf{X}^T~E(\textbf{X}\beta+\epsilon)\\
+             & (\textbf{X}^T\textbf{X})^{-1} \textbf{X}^T~(\textbf{X}\beta+E(\epsilon))\\
+             &  (\textbf{X}^T\textbf{X})^{-1} \textbf{X}^T~(\textbf{X}\beta+\textbf{0}) = \beta
+             
+\end{align}
+
+::: {.exercise}
+Calculate the variance of $\hat{\beta}$. 
+:::
+\begin{align}
+var(\hat\beta) & = var((\textbf{X}^T\textbf{X})^{-1}~ \textbf{X}^T\textbf{Y})\\
+             & = (\textbf{X}^T\textbf{X})^{-1}~ \textbf{X}^T~var(\textbf{Y})((\textbf{X}^T\textbf{X})^{-1}~ \textbf{X}^T)^T\\
+             & = (\textbf{X}^T\textbf{X})^{-1} \textbf{X}^T~var(\textbf{X}\beta+\epsilon)((\textbf{X}^T\textbf{X})^{-1}~ \textbf{X}^T)^T\\
+             & = (\textbf{X}^T\textbf{X})^{-1} \textbf{X}^T~var(\epsilon)((\textbf{X}^T\textbf{X})^{-1}~ \textbf{X}^T)^T\\
+             & = \sigma^2~  (\textbf{X}^T\textbf{X})^{-1} \textbf{X}^T~((\textbf{X}^T\textbf{X})^{-1}~ \textbf{X}^T)^T\\
+             & = \sigma^2 (\textbf{X}^T~\textbf{X})^{-1}
+\end{align}  
+
+As $$\textbf{X}^T~\textbf{X}=\begin{bmatrix} 
+n  & \sum_{i=1}^{n}x_i \\ 
+\sum_{i=1}^{n}x_i & \sum_{i=1}^{n}x_i^2 \\
+\end{bmatrix}$$
+
+Therefore, 
+$$(\textbf{X}^T~\textbf{X})^{-1} = \dfrac{1}{\sum_{i=1}^{n}(x_i-\bar{x})^2} \begin{bmatrix}
+\frac{1}{n}\sum_{i=1}^{n}~x_i^2 & -\bar{x}\\
+-\bar{x}  & 1
+\end{bmatrix}$$
+
+And that can be written to be:
+
+$$var(\hat\beta)=\dfrac{\sigma^2}{\sum_{i=1}^{n}(x_i-\bar{x})^2} \begin{bmatrix}
+\frac{1}{n}\sum_{i=1}^{n}~x_i^2 & -\bar{x}\\
+-\bar{x}  & 1\end{bmatrix}= \begin{bmatrix}
+var(\hat{\beta_0}) & cov(\hat{\beta_0},\hat{\beta_1})\\
+cov(\hat{\beta_0},\hat{\beta_1}) & var(\hat{\beta_1})
+\end{bmatrix}$$
+
+
+::: {.exercise}
+Assuming the data set  
+:::
+
+```{r , echo=FALSE}
+frame = data.frame(X=c(77,54,71,72,81,94,96,99,83,67),Y=c(82,38,78,34,37,85,99,99,79,67))
+frame=t(frame)
+
+knitr::kable(frame, raw.names = c("X","Y"), align = "lccrr")
+```
+
+a. Calculate $\hat{\beta}$.
+```{r}
+Y = c(82,38,78,34,37,85,99,99,79,67)
+X = matrix(c(1,1,1,1,1,1,1,1,1,1,77,54,71,72,81,94,96,99,83,67), nc=2, byrow = FALSE)
+X
+
+beta = solve(t(X)%*%X)%*%(t(X)%*%Y)
+beta
+```
+
+b. Calculate $cov(\hat\beta_0,\hat\beta_1)$. 
+One way of doing that is by calculating the covariance matrix
+```{r}
+s_squared = 1/(length(Y)-2) *  t(Y-X%*%beta)%*%(Y- X%*%beta)
+s_squared
+var_beta =   solve(t(X)%*%X) * 347.855
+var_beta
+```
+ 
+ Therefore, the covariance between $\beta_0$ and $\beta_1$ is $-15.19$
+
+
+
+## Courswork 
+Attempt Problem 2 in the past exam paper [here](https://ksusa-my.sharepoint.com/:b:/g/personal/aalharbi10_ksu_edu_sa/EZNEoIiqwDJMgpQju52KOrABi77U9CT5ZvpjC3uihpeB_w?e=I3fcRb)
