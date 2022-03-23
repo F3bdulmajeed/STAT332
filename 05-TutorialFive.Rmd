@@ -3,7 +3,7 @@
 Recall that the simple linear model formula is defined as follow:
 $$y_i = \beta_0 +\beta_1~x_i + \epsilon_i ~~~~~~~~i =1,2,...,n$$
 However, this formula can be re-written in matrices setup to be as follow:
-$$\textbf{Y} = \beta~\textbf{X}+\epsilon$$
+$$\textbf{Y} = \textbf{X}~\beta+\epsilon$$
 Where $\textbf{Y}$ is a vector of y elements, $\beta= [\beta_0, \beta_1]^T$ and $\epsilon$ is a vector of the errors and $X$ is the following matrix:
 $$\textbf{X}= \begin{bmatrix} 
 1  & x_1 \\ 
@@ -25,12 +25,12 @@ Let us start with reminding ourselves with that
 \
 3) $\sum x_i^2 = \textbf{x}^T~\textbf{x}$
 \
-Now as we know the $SSR = \sum(y-\hat{y})^2$ and that can be rearranged to be written $SSR = (\textbf{Y}-\beta~\textbf{X})^T~(\textbf{Y}-\beta~\textbf{X})$ so now we aim to find $\underset{\beta}{\min}~ SSR$ in order to do this optimisation problem we need to calculate the gradient of SSR
+Now as we know the $SSR = \sum(y-\hat{y})^2$ and that can be rearranged to be written $SSR = (\textbf{Y}-\textbf{X}~\beta)^T~(\textbf{Y}-\textbf{X}~\beta)$ so now we aim to find $\underset{\beta}{\min}~ SSR$ in order to do this optimisation problem we need to calculate the gradient of SSR
 \begin{align}
-&\dfrac{d}{d~\beta}~(\textbf{Y}-\beta~\textbf{X})^T~(\textbf{Y}-\beta~\textbf{X})\\
+&\dfrac{d}{d~\beta}~(\textbf{Y}-\textbf{X}~\beta)^T~(\textbf{Y}-\textbf{X}~\beta)\\
 &\dfrac{d}{d~\beta} (\textbf{Y}^T\textbf{Y}-\textbf{Y}^T~\textbf{X}\beta-\beta^T~\textbf{X}^T~\textbf{Y}+\beta^T~\textbf{X}^T~\textbf{X}~\beta)\\
 &\dfrac{d}{d~\beta} (\textbf{Y}^T\textbf{Y}-2\textbf{Y}^T~\textbf{X}\beta+\beta^T~\textbf{X}^T~\textbf{X}~\beta)\\
-&= (-2\textbf{Y}T\textbf{X})^T+2\textbf{X}^T\textbf{X}\beta\\
+&= (-2\textbf{Y}^{T}\textbf{X})^T+2\textbf{X}^T\textbf{X}\beta\\
 &= -2~\textbf{X}^T\textbf{Y} + 2\textbf{X}^T\textbf{X}\beta
 \end{align}
 Therefore $\hat\beta$ will be the least squares estimator of $\beta$ if $-2~\textbf{X}^T\textbf{Y} + 2\textbf{X}^T\textbf{X}\hat\beta=0$.

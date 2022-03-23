@@ -183,7 +183,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Recall that the simple linear model formula is defined as follow:
 <span class="math display">\[y_i = \beta_0 +\beta_1~x_i + \epsilon_i ~~~~~~~~i =1,2,...,n\]</span>
 However, this formula can be re-written in matrices setup to be as follow:
-<span class="math display">\[\textbf{Y} = \beta~\textbf{X}+\epsilon\]</span>
+<span class="math display">\[\textbf{Y} = \textbf{X}~\beta+\epsilon\]</span>
 Where <span class="math inline">\(\textbf{Y}\)</span> is a vector of y elements, <span class="math inline">\(\beta= [\beta_0, \beta_1]^T\)</span> and <span class="math inline">\(\epsilon\)</span> is a vector of the errors and <span class="math inline">\(X\)</span> is the following matrix:
 <span class="math display">\[\textbf{X}= \begin{bmatrix} 
 1  &amp; x_1 \\ 
@@ -201,12 +201,12 @@ Let us start with reminding ourselves with that<br />
 1) <span class="math inline">\(\dfrac{d}{dx} Ax = A^T\)</span> where A is a matrix of constants.<br />
 2) <span class="math inline">\(\dfrac{d}{dx} x^TAx = 2Ax\)</span> whenever A is symmetric.<br />
 3) <span class="math inline">\(\sum x_i^2 = \textbf{x}^T~\textbf{x}\)</span><br />
-Now as we know the <span class="math inline">\(SSR = \sum(y-\hat{y})^2\)</span> and that can be rearranged to be written <span class="math inline">\(SSR = (\textbf{Y}-\beta~\textbf{X})^T~(\textbf{Y}-\beta~\textbf{X})\)</span> so now we aim to find <span class="math inline">\(\underset{\beta}{\min}~ SSR\)</span> in order to do this optimisation problem we need to calculate the gradient of SSR
+Now as we know the <span class="math inline">\(SSR = \sum(y-\hat{y})^2\)</span> and that can be rearranged to be written <span class="math inline">\(SSR = (\textbf{Y}-\textbf{X}~\beta)^T~(\textbf{Y}-\textbf{X}~\beta)\)</span> so now we aim to find <span class="math inline">\(\underset{\beta}{\min}~ SSR\)</span> in order to do this optimisation problem we need to calculate the gradient of SSR
 <span class="math display">\[\begin{align}
-&amp;\dfrac{d}{d~\beta}~(\textbf{Y}-\beta~\textbf{X})^T~(\textbf{Y}-\beta~\textbf{X})\\
+&amp;\dfrac{d}{d~\beta}~(\textbf{Y}-\textbf{X}~\beta)^T~(\textbf{Y}-\textbf{X}~\beta)\\
 &amp;\dfrac{d}{d~\beta} (\textbf{Y}^T\textbf{Y}-\textbf{Y}^T~\textbf{X}\beta-\beta^T~\textbf{X}^T~\textbf{Y}+\beta^T~\textbf{X}^T~\textbf{X}~\beta)\\
 &amp;\dfrac{d}{d~\beta} (\textbf{Y}^T\textbf{Y}-2\textbf{Y}^T~\textbf{X}\beta+\beta^T~\textbf{X}^T~\textbf{X}~\beta)\\
-&amp;= (-2\textbf{Y}T\textbf{X})^T+2\textbf{X}^T\textbf{X}\beta\\
+&amp;= (-2\textbf{Y}^{T}\textbf{X})^T+2\textbf{X}^T\textbf{X}\beta\\
 &amp;= -2~\textbf{X}^T\textbf{Y} + 2\textbf{X}^T\textbf{X}\beta
 \end{align}\]</span>
 Therefore <span class="math inline">\(\hat\beta\)</span> will be the least squares estimator of <span class="math inline">\(\beta\)</span> if <span class="math inline">\(-2~\textbf{X}^T\textbf{Y} + 2\textbf{X}^T\textbf{X}\hat\beta=0\)</span>.
