@@ -1,0 +1,82 @@
+# 6th Tutorial 
+
+## Recap
+
+So far we have been dealing with the regression problem that given in the formula $$y_ = \beta_0 + \beta_1~x_i +\epsilon_i ~~~~~~~~ i = 1,2,...,n$$
+Where $Y$ is the response variable and $X$ is the predictor variable. However, in many cases there are several predictor variables which known to be the multiple linear regression. An example of the use of multiple linear regression: One is interested in modeling the price of an properties (houses) in Riyadh given the area space, number of rooms and the location. in this case we have three predictor variables and we aim to draw a hyperplane the enables as to understand the underlying pattern of the price in the real state.  
+\
+The general formula of the multiple linear regression is given by:
+$$y_i = \beta_0 + \sum_{j=1}^{p} \beta_j~x_{j_{i}}+\epsilon_i$$
+
+Where $p$ is the number of the predictor variables. 
+
+And that could be reformulate using matrices framework to be
+$$\textbf{Y} = \textbf{X}\beta + \epsilon $$
+
+Where $\textbf{Y}^T= [y_1,y_2,...,y_n]$ , $\beta^T = [\beta_0,\beta_1,...,\beta_p]$ and $\epsilon^T = [\epsilon_1,\epsilon_2,...,\epsilon_n]$ and
+
+$$\textbf{X}= \begin{bmatrix} 
+1  & x_{1_{1}} & x_{2_1} & \dots & x_{p_{1}} \\ 
+\vdots & \vdots & \vdots & \vdots & \vdots \\
+1 & x_{1_{n}} & x_{2_n} & \dots & x_{p_{n}}
+\end{bmatrix}$$
+
+
+## Exercises
+::: {.exercise}
+Consider the data:
+:::
+
+
+```{r , echo=FALSE, warning=FALSE, message=FALSE}
+
+Y = c(85,152,41,93,101,38,203,78,117,44,121,112,50,82,48,127,140,155,39,90)
+X1 = c(7,18,5,14,11,5,23,9,16,5,17,12,6,12,8,15,17,21,6,11)
+X2 = c(5.11,16.72,3.20,7.03,10.98,4.04,22.07,7.03,10.62,4.76,11.02,9.51,3.79,6.45,4.60,13.86,13.03,15.21,3.64,9.57)
+frame = data.frame(Y = c(85,152,41,93,101,38,203,78,117,44,121,112,50,82,48,127,140,155,39,90),
+X1 = c(7,18,5,14,11,5,23,9,16,5,17,12,6,12,8,15,17,21,6,11),
+X2 = c(5.11,16.72,3.20,7.03,10.98,4.04,22.07,7.03,10.62,4.76,11.02,9.51,3.79,6.45,4.60,13.86,13.03,15.21,3.64,9.57))
+Frame=t(frame)
+
+knitr::kable(Frame, raw.names = c("Y","X1","X2"), align = "lccrr")
+
+library(plotly)
+
+fig <- plot_ly(frame, x = Y, y = X1, z = X2)
+fig
+```
+
+1) Look at the 3D plot and comment 
+2) Calculate the following: $\textbf{X}^T\textbf{X}, \textbf{X}^T\textbf{Y}, (\textbf{X}^T\textbf{X})^{−1}, \beta ,\textbf{Y}^T,\epsilon^T, SSE, SST, SSR, R^2$ and $r_{XY}$ 
+3) write dawn the equation of the multiple regression plane. 
+
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+
+::: {.exercise}
+To investigate the linear model $Y= \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \epsilon$  we assume the following:
+:::
+
+$$\textbf{X}^T~\textbf{X}= \begin{bmatrix} a &171 & 25500 \\ b & 2271 & 262600 \\ 25500 & 262600 & 46150000\end{bmatrix},~~~~~~~~~~~~~~\textbf{X}^T\textbf{Y}= \begin{bmatrix} c \\ 18410 \\ 3371000  \end{bmatrix}$$
+$$\textbf{Y}^T = [60~~70~~80~~ 90~~ 100~~ 120~~ 110~~ 110~~ 130~~ 130~~ 140~~ 180~~ 160~~ 170~~ 190]$$
+1. Calculate the values of a,b and c.
+\
+2. Calculate SSE, SSTO and SSR. 
+\
+3. Estimate the coefficients of the model and interpret the results.
+\
+4. Calculate the variance of $\beta$. 
+
+
+
+## Coursework
+1. attempt Problem 4 in the past exam paper [here](https://ksusa-my.sharepoint.com/personal/aalharbi10_ksu_edu_sa/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Faalharbi10%5Fksu%5Fedu%5Fsa%2FDocuments%2F332%2Dmid2%2D371%2Epdf&parent=%2Fpersonal%2Faalharbi10%5Fksu%5Fedu%5Fsa%2FDocuments&ga=1)

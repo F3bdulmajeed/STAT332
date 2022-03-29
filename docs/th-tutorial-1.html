@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="th-tutorial.html"/>
-
+<link rel="next" href="th-tutorial-2.html"/>
 <script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -52,6 +52,13 @@
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.3/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
 
 
 <style type="text/css">
@@ -159,6 +166,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2" data-path="th-tutorial-1.html"><a href="th-tutorial-1.html#exercises-3"><i class="fa fa-check"></i><b>5.2</b> Exercises</a></li>
 <li class="chapter" data-level="5.3" data-path="th-tutorial-1.html"><a href="th-tutorial-1.html#courswork"><i class="fa fa-check"></i><b>5.3</b> Courswork</a></li>
 </ul></li>
+<li class="chapter" data-level="6" data-path="th-tutorial-2.html"><a href="th-tutorial-2.html"><i class="fa fa-check"></i><b>6</b> 6th Tutorial</a><ul>
+<li class="chapter" data-level="6.1" data-path="th-tutorial-2.html"><a href="th-tutorial-2.html#recap-5"><i class="fa fa-check"></i><b>6.1</b> Recap</a></li>
+<li class="chapter" data-level="6.2" data-path="th-tutorial-2.html"><a href="th-tutorial-2.html#exercises-4"><i class="fa fa-check"></i><b>6.2</b> Exercises</a></li>
+<li class="chapter" data-level="6.3" data-path="th-tutorial-2.html"><a href="th-tutorial-2.html#coursework-4"><i class="fa fa-check"></i><b>6.3</b> Coursework</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -194,7 +206,7 @@ Where <span class="math inline">\(\textbf{Y}\)</span> is a vector of y elements,
 <div id="exercises-3" class="section level2">
 <h2><span class="header-section-number">5.2</span> Exercises</h2>
 <div class="exercise">
-<p><span id="exr:unlabeled-div-1" class="exercise"><strong>Exercise 5.1  </strong></span>Using the matrices framework calculate the least squared estimate for <span class="math inline">\(\beta\)</span>.</p>
+<p><span id="exr:unlabeled-div-6" class="exercise"><strong>Exercise 5.1  </strong></span>Using the matrices framework calculate the least squared estimate for <span class="math inline">\(\beta\)</span>.</p>
 </div>
 <p><strong>Solution</strong><br />
 Let us start with reminding ourselves with that<br />
@@ -213,7 +225,7 @@ Therefore <span class="math inline">\(\hat\beta\)</span> will be the least squar
 To be able to isolate <span class="math inline">\(\hat\beta\)</span> it is necessary for <span class="math inline">\(\textbf{X}^T\textbf{X}\)</span> to be invertible; therefore we need <span class="math inline">\(\textbf{X}\)</span> to be of full rank,then</p>
 <p><span class="math display">\[\hat\beta= (\textbf{X}^T\textbf{X})^{-1}~ \textbf{X}^T\textbf{Y} \]</span></p>
 <div class="exercise">
-<p><span id="exr:unlabeled-div-2" class="exercise"><strong>Exercise 5.2  </strong></span>Prove that <span class="math inline">\(\hat{\beta}\)</span> is unbiased.</p>
+<p><span id="exr:unlabeled-div-7" class="exercise"><strong>Exercise 5.2  </strong></span>Prove that <span class="math inline">\(\hat{\beta}\)</span> is unbiased.</p>
 </div>
 <p><strong>Solution</strong>
 <span class="math display">\[\begin{align}
@@ -225,7 +237,7 @@ E(\hat\beta) &amp; = E((\textbf{X}^T\textbf{X})^{-1}~ \textbf{X}^T\textbf{Y})\\
              
 \end{align}\]</span></p>
 <div class="exercise">
-<p><span id="exr:unlabeled-div-3" class="exercise"><strong>Exercise 5.3  </strong></span>Calculate the variance of <span class="math inline">\(\hat{\beta}\)</span>.</p>
+<p><span id="exr:unlabeled-div-8" class="exercise"><strong>Exercise 5.3  </strong></span>Calculate the variance of <span class="math inline">\(\hat{\beta}\)</span>.</p>
 </div>
 <p><span class="math display">\[\begin{align}
 var(\hat\beta) &amp; = var((\textbf{X}^T\textbf{X})^{-1}~ \textbf{X}^T\textbf{Y})\\
@@ -252,7 +264,7 @@ var(\hat{\beta_0}) &amp; cov(\hat{\beta_0},\hat{\beta_1})\\
 cov(\hat{\beta_0},\hat{\beta_1}) &amp; var(\hat{\beta_1})
 \end{bmatrix}\]</span></p>
 <div class="exercise">
-<p><span id="exr:unlabeled-div-4" class="exercise"><strong>Exercise 5.4  </strong></span>Assuming the data set</p>
+<p><span id="exr:unlabeled-div-9" class="exercise"><strong>Exercise 5.4  </strong></span>Assuming the data set</p>
 </div>
 <table>
 <tbody>
@@ -287,9 +299,9 @@ cov(\hat{\beta_0},\hat{\beta_1}) &amp; var(\hat{\beta_1})
 <ol style="list-style-type: lower-alpha">
 <li>Calculate <span class="math inline">\(\hat{\beta}\)</span>.</li>
 </ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="th-tutorial-1.html#cb1-1"></a>Y =<span class="st"> </span><span class="kw">c</span>(<span class="dv">82</span>,<span class="dv">38</span>,<span class="dv">78</span>,<span class="dv">34</span>,<span class="dv">37</span>,<span class="dv">85</span>,<span class="dv">99</span>,<span class="dv">99</span>,<span class="dv">79</span>,<span class="dv">67</span>)</span>
-<span id="cb1-2"><a href="th-tutorial-1.html#cb1-2"></a>X =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">77</span>,<span class="dv">54</span>,<span class="dv">71</span>,<span class="dv">72</span>,<span class="dv">81</span>,<span class="dv">94</span>,<span class="dv">96</span>,<span class="dv">99</span>,<span class="dv">83</span>,<span class="dv">67</span>), <span class="dt">nc=</span><span class="dv">2</span>, <span class="dt">byrow =</span> <span class="ot">FALSE</span>)</span>
-<span id="cb1-3"><a href="th-tutorial-1.html#cb1-3"></a>X</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="th-tutorial-1.html#cb10-1"></a>Y =<span class="st"> </span><span class="kw">c</span>(<span class="dv">82</span>,<span class="dv">38</span>,<span class="dv">78</span>,<span class="dv">34</span>,<span class="dv">37</span>,<span class="dv">85</span>,<span class="dv">99</span>,<span class="dv">99</span>,<span class="dv">79</span>,<span class="dv">67</span>)</span>
+<span id="cb10-2"><a href="th-tutorial-1.html#cb10-2"></a>X =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">77</span>,<span class="dv">54</span>,<span class="dv">71</span>,<span class="dv">72</span>,<span class="dv">81</span>,<span class="dv">94</span>,<span class="dv">96</span>,<span class="dv">99</span>,<span class="dv">83</span>,<span class="dv">67</span>), <span class="dt">nc=</span><span class="dv">2</span>, <span class="dt">byrow =</span> <span class="ot">FALSE</span>)</span>
+<span id="cb10-3"><a href="th-tutorial-1.html#cb10-3"></a>X</span></code></pre></div>
 <pre><code>##       [,1] [,2]
 ##  [1,]    1   77
 ##  [2,]    1   54
@@ -301,8 +313,8 @@ cov(\hat{\beta_0},\hat{\beta_1}) &amp; var(\hat{\beta_1})
 ##  [8,]    1   99
 ##  [9,]    1   83
 ## [10,]    1   67</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="th-tutorial-1.html#cb3-1"></a>beta =<span class="st"> </span><span class="kw">solve</span>(<span class="kw">t</span>(X)<span class="op">%*%</span>X)<span class="op">%*%</span>(<span class="kw">t</span>(X)<span class="op">%*%</span>Y)</span>
-<span id="cb3-2"><a href="th-tutorial-1.html#cb3-2"></a>beta</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="th-tutorial-1.html#cb12-1"></a>beta =<span class="st"> </span><span class="kw">solve</span>(<span class="kw">t</span>(X)<span class="op">%*%</span>X)<span class="op">%*%</span>(<span class="kw">t</span>(X)<span class="op">%*%</span>Y)</span>
+<span id="cb12-2"><a href="th-tutorial-1.html#cb12-2"></a>beta</span></code></pre></div>
 <pre><code>##           [,1]
 ## [1,] -29.26661
 ## [2,]   1.24769</code></pre>
@@ -310,12 +322,12 @@ cov(\hat{\beta_0},\hat{\beta_1}) &amp; var(\hat{\beta_1})
 <li>Calculate <span class="math inline">\(cov(\hat\beta_0,\hat\beta_1)\)</span>.
 One way of doing that is by calculating the covariance matrix</li>
 </ol>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="th-tutorial-1.html#cb5-1"></a>s_squared =<span class="st"> </span><span class="dv">1</span><span class="op">/</span>(<span class="kw">length</span>(Y)<span class="op">-</span><span class="dv">2</span>) <span class="op">*</span><span class="st">  </span><span class="kw">t</span>(Y<span class="op">-</span>X<span class="op">%*%</span>beta)<span class="op">%*%</span>(Y<span class="op">-</span><span class="st"> </span>X<span class="op">%*%</span>beta)</span>
-<span id="cb5-2"><a href="th-tutorial-1.html#cb5-2"></a>s_squared</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="th-tutorial-1.html#cb14-1"></a>s_squared =<span class="st"> </span><span class="dv">1</span><span class="op">/</span>(<span class="kw">length</span>(Y)<span class="op">-</span><span class="dv">2</span>) <span class="op">*</span><span class="st">  </span><span class="kw">t</span>(Y<span class="op">-</span>X<span class="op">%*%</span>beta)<span class="op">%*%</span>(Y<span class="op">-</span><span class="st"> </span>X<span class="op">%*%</span>beta)</span>
+<span id="cb14-2"><a href="th-tutorial-1.html#cb14-2"></a>s_squared</span></code></pre></div>
 <pre><code>##         [,1]
 ## [1,] 347.855</code></pre>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="th-tutorial-1.html#cb7-1"></a>var_beta =<span class="st">   </span><span class="kw">solve</span>(<span class="kw">t</span>(X)<span class="op">%*%</span>X) <span class="op">*</span><span class="st"> </span><span class="fl">347.855</span></span>
-<span id="cb7-2"><a href="th-tutorial-1.html#cb7-2"></a>var_beta</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="th-tutorial-1.html#cb16-1"></a>var_beta =<span class="st">   </span><span class="kw">solve</span>(<span class="kw">t</span>(X)<span class="op">%*%</span>X) <span class="op">*</span><span class="st"> </span><span class="fl">347.855</span></span>
+<span id="cb16-2"><a href="th-tutorial-1.html#cb16-2"></a>var_beta</span></code></pre></div>
 <pre><code>##            [,1]        [,2]
 ## [1,] 1240.79251 -15.1890052
 ## [2,]  -15.18901   0.1912973</code></pre>
@@ -332,8 +344,8 @@ One way of doing that is by calculating the covariance matrix</li>
           </div>
         </div>
       </div>
-<a href="th-tutorial.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="th-tutorial.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="th-tutorial-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
