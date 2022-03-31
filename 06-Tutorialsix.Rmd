@@ -48,6 +48,12 @@ fig
 
 1) Look at the 3D plot and comment 
 2) Calculate the following: $\textbf{X}^T\textbf{X}, \textbf{X}^T\textbf{Y}, (\textbf{X}^T\textbf{X})^{−1}, \beta ,\textbf{Y}^T,\epsilon^T, SSE, SST, SSR, R^2$ and $r_{XY}$ 
+```{r}
+Y = c(85,152,41,93,101,38,203,78,117,44,121,112,50,82,48,127,140,155,39,90)
+X1 = c(7,18,5,14,11,5,23,9,16,5,17,12,6,12,8,15,17,21,6,11)
+X2 = c(5.11,16.72,3.20,7.03,10.98,4.04,22.07,7.03,10.62,4.76,11.02,9.51,3.79,6.45,4.60,13.86,13.03,15.21,3.64,9.57)
+```
+
 3) write dawn the equation of the multiple regression plane. 
 
 \
