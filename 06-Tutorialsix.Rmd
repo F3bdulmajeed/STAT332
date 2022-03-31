@@ -38,7 +38,7 @@ X1 = c(7,18,5,14,11,5,23,9,16,5,17,12,6,12,8,15,17,21,6,11),
 X2 = c(5.11,16.72,3.20,7.03,10.98,4.04,22.07,7.03,10.62,4.76,11.02,9.51,3.79,6.45,4.60,13.86,13.03,15.21,3.64,9.57))
 Frame=t(frame)
 
-knitr::kable(Frame, raw.names = c("Y","X1","X2"), align = "lccrr")
+knitr::kable(frame, col.names = c("Y","X1","X2"), align = "lccrr")
 
 library(plotly)
 
