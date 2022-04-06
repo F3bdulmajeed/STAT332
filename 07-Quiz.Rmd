@@ -1,0 +1,23 @@
+# Quick Quiz {-}
+
+**Problem **
+\
+You will use the iris dataset that comes with R by default.  You can access this dataset simply by typing in `iris` in your R console. More information about the dataset is given here `help(iris)`. You will find that it consists of 150 observations(rows) and 5 variables (columns), here we will only be interested in the petal length and petal width
+```{r}
+head(iris)
+```
+
+We aim here to predict the petal width given the petal length using simple linear regression so please answer the following question.
+\
+1. Comment about the scatter plot of the two variables. 
+\
+2. Write down the estimated line equation.
+\
+3. Test the existence of the regression using two approaches.
+\
+4. Use the function `hist()` to draw a histogram of the residuals and comment. 
+\
+5. Interpret the value of $R^2$
+
+
+

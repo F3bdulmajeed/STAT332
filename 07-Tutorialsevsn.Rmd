@@ -1,0 +1,21 @@
+# 7th Turorial 
+
+## Recap
+Previously we have been discussing multivariate linear regression that have the formula $\textbf{Y} = \textbf{X}\beta + \epsilon$. Now assume we have two linear model $M_1$ and $M_2$ where $M_2$ is a simplification of $M_1$ such as ($M_1: y_i = \beta_0 + \beta_1~x_{1_{i}} + \beta_2~x_{2_{i}}+ \beta_3~x_{3_{i}}$ and $M_2: y_i = \beta_0 + \beta_1~x_{1_{i}}$) A question arises here is which model is preferred and that is equivalent to test 
+
+$$H_0 = \beta_2 = \beta_3 =0 ~~~ vs ~~~ H_1 = \beta_2 \neq 0 , \beta_3  \neq0 $$
+
+The **decision rule** is to reject $H_0$ if
+$$F = \frac{(D_2-D_1)/q}{D_1/(n-p)} > F_{q,n−p,\alpha}$$
+
+where $n$ is the number of observations,
+$p$ is the number of parameters in $M_1$ and
+$q$ is the number of parameters fixed to reduce $M_1$ to $M_2$.
+For the example above, $p = 4$ and $q = 2$, and $D_1$ and $D_2$ are the SSR of $M_1$ and $M_2$ respectively. Equivalently, we could use the notation $SSE(...)$. For instance $SSE(X_1,X_2,X_3)$ denotes the sum of squared error for a multiple linear regression that includes $X_1$, $X_2$ and $X_3$ to draw the model. 
+
+
+
+## Exercises 
+
+
+## Coursework 

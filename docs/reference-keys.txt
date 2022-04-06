@@ -33,3 +33,7 @@ th-tutorial-2
 recap-5
 exercises-4
 coursework-4
+th-turorial
+recap-6
+coursework-5
+exercises-5
