@@ -25,7 +25,7 @@ For the example above, $p = 4$ and $q = 2$, and $D_1$ and $D_2$ are the SSR of $
 2. Discuss the efficiency of the model by two different approaches.
 3. Write the ANOVA table that factorize the sum square regression $X_1$ and $X_2$ given $X_1$.
 4. Use partial F to test whether you can remove $X_2$ from model.
-5. Calculate $R^2$ , $r^2_{Y,2.1} , $r_{Y,1.2} and $r^2_{Y,2}$
+5. Calculate $R^2$ , $r^2_{Y,2.1}$ , $r_{Y,1.2}$ and $r^2_{Y,2}$
 6. Estimate the corresponding standard model and discuss its coefficient.
 
-## Coursework 
+
